@@ -17,10 +17,14 @@ class Addnew extends Component {
     this.setState({ input: value });
   }
   handleNewActivity(e) {
+    // e.preventDefault();
+    console.log("break");
     axios
       .post("/api/userInputs", { activities: this.state.input })
       .then(response => {
+        console.log(response);
         this.setState({ newActivity: response.data });
+        this.props.updateNewActivity(response.data);
       });
   }
 

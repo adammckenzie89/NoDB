@@ -8,7 +8,7 @@ class Form extends Component {
   render() {
     return (
       <div className="questions">
-        <form onSubmit={this.handleSubmit}>
+        <main>
           <div>
             <h1>Inside or Outside</h1>
             <ul>
@@ -90,9 +90,9 @@ class Form extends Component {
             </ul>
           </div>
           <section>
-            <Addnew />
+            <Addnew updateNewActivity={this.props.updateNewActivity} />
           </section>
-        </form>
+        </main>
       </div>
     );
   }

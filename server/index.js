@@ -8,6 +8,7 @@ const PORT = 5050;
 app.get("/api/activities", controller.getActivities);
 app.get("/api/newActivity", controller.getNewActivities);
 app.post("/api/userInputs", controller.Addnew);
+app.put("/api/updateActivity", controller.updateActivity);
 
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`);

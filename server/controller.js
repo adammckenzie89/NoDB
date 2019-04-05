@@ -71,7 +71,7 @@ const activities = [
   },
   {
     id: 11,
-    activity: "Do push-ups",
+    activity: "jumping-jacks",
     inOrOut: "inside",
     group: "no",
     energy: "high"
@@ -88,7 +88,15 @@ module.exports = {
     res.status(200).json(userInputs);
   },
   Addnew: (req, res) => {
+    console.log("hit");
     userInputs.push(req.body);
+    res.status(200).json(userInputs);
+  },
+  updateActivity: (req, res) => {
+    const index = userInputs.findIndex(ele => {
+      return ele.activities === req.body.updated;
+    });
+    userInputs[index].activities = req.body.newValue;
     res.status(200).json(userInputs);
   }
 };

@@ -7,6 +7,7 @@ class Activitylist extends Component {
     super();
 
     this.state = {
+      editInput: "",
       newActivity: [],
       activity: [],
       inOrOut: "",
@@ -14,6 +15,7 @@ class Activitylist extends Component {
       energy: ""
     };
     this.handleChange = this.handleChange.bind(this);
+    this.updateNewActivity = this.updateNewActivity.bind(this);
   }
   handleChange(e) {
     this.setState({ [e.target.name]: e.target.value });
@@ -31,6 +33,17 @@ class Activitylist extends Component {
         newActivity: response.data
       });
     });
+  }
+  updateNewActivity(param) {
+    this.setState({ newActivity: param });
+  }
+  updateActivity(updated) {
+    console.log("anything");
+    axios
+      .put("/api/updateActivity", { newValue: this.state.editInput, updated })
+      .then(response => {
+        this.setState({ newActivity: response.data });
+      });
   }
 
   render() {
@@ -53,6 +66,10 @@ class Activitylist extends Component {
       return (
         <div key={index}>
           <h1>{activities.activities}</h1>
+          <button onClick={() => this.updateActivity(activities.activities)}>
+            update
+          </button>
+          <input onChange={e => this.setState({ editInput: e.target.value })} />
         </div>
       );
     });
@@ -63,6 +80,7 @@ class Activitylist extends Component {
           {New}
         </div>
         <Form
+          updateNewActivity={this.updateNewActivity}
           handleChange={this.handleChange}
           inOrOut={this.state.inOrOut}
           group={this.state.group}
