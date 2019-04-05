@@ -22,28 +22,35 @@ class Activitylist extends Component {
   }
 
   componentDidMount() {
-    axios.get("/api/activities").then(response => {
+    axios.get("/api/defaultActivities").then(response => {
       console.log(response);
       this.setState({
         activity: response.data
       });
     });
-    axios.get("/api/newActivity").then(response => {
-      this.setState({
-        newActivity: response.data
-      });
-    });
+    axios
+      .get("/api/userActivity")
+      .then(response => {
+        this.setState({
+          newActivity: response.data
+        });
+      })
+      .catch(errors => console.log("errors"));
   }
   updateNewActivity(param) {
     this.setState({ newActivity: param });
   }
   updateActivity(updated) {
-    console.log("anything");
     axios
-      .put("/api/updateActivity", { newValue: this.state.editInput, updated })
+      .put("/api/userActivity", { newValue: this.state.editInput, updated })
       .then(response => {
         this.setState({ newActivity: response.data });
       });
+  }
+  deleteActivity(id) {
+    axios.delete("/api/userActivity/" + id).then(response => {
+      this.setState({ newActivity: response.data });
+    });
   }
 
   render() {
@@ -63,13 +70,17 @@ class Activitylist extends Component {
         );
       });
     let New = this.state.newActivity.map((activities, index) => {
+      console.log(activities);
       return (
         <div key={index}>
           <h1>{activities.activities}</h1>
           <button onClick={() => this.updateActivity(activities.activities)}>
-            update
+            Change
           </button>
           <input onChange={e => this.setState({ editInput: e.target.value })} />
+          <button onClick={() => this.deleteActivity(activities.id)}>
+            &#10006;
+          </button>
         </div>
       );
     });

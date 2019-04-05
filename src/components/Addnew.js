@@ -20,7 +20,7 @@ class Addnew extends Component {
     // e.preventDefault();
     console.log("break");
     axios
-      .post("/api/userInputs", { activities: this.state.input })
+      .post("/api/userActivity", { activities: this.state.input })
       .then(response => {
         console.log(response);
         this.setState({ newActivity: response.data });

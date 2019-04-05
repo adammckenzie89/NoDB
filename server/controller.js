@@ -11,7 +11,7 @@ const activities = [
     activity: "bowling",
     inOrOut: "inside",
     group: "yes",
-    energy: "low"
+    energy: "high"
   },
   {
     id: 3,
@@ -81,14 +81,13 @@ const userInputs = [];
 
 module.exports = {
   getActivities: (req, res) => {
-    console.log("hey!");
     res.status(200).json(activities);
   },
   getNewActivities: (req, res) => {
     res.status(200).json(userInputs);
   },
   Addnew: (req, res) => {
-    console.log("hit");
+    req.body.id = activities.length + userInputs.length + 1;
     userInputs.push(req.body);
     res.status(200).json(userInputs);
   },
@@ -97,6 +96,13 @@ module.exports = {
       return ele.activities === req.body.updated;
     });
     userInputs[index].activities = req.body.newValue;
+    res.status(200).json(userInputs);
+  },
+  deleteActivity: (req, res) => {
+    const index = userInputs.findIndex(ele => {
+      ele.id === +req.params.id;
+    });
+    userInputs.splice(index, 1);
     res.status(200).json(userInputs);
   }
 };
