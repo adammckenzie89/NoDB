@@ -34,13 +34,13 @@ class Addnew extends Component {
     });
     return (
       <div>
-        <h4>Add your Own activity!</h4>
+        <h4>Post your own</h4>
         <label> --> </label>
         <input
           placeholder="New Activity"
           onChange={e => this.handleInputChange(e.target.value)}
         />
-        <button onClick={e => this.handleNewActivity(e)}>Add</button>
+        <button onClick={e => this.handleNewActivity(e)}>&#43;</button>
         <br />
         {New}
       </div>

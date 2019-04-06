@@ -8,13 +8,16 @@ body {
   border: 1px solid rgb(182, 21, 160);
   width: 20vw;
   height: 80vh;
-  margin: 20px;
+  margin: 50px;
   background: #f1f1ee;
   overflow-y: scroll;
+  border-radius: 25px;
+  font-family: Tahoma;
+  font-weight: 100;
 }
 
 .nav {
-  height: 60px;
+  height: 70px;
   width: 100vw;
   background: rgb(197, 58, 100);
   color: white;
@@ -55,8 +58,20 @@ body {
   border: 1px solid rgb(104, 133, 26);
   width: 20vw;
   height: 80vh;
-  margin: 20px;
+  margin: 50px;
   font-size: 10;
   background: #f1f1ee;
   overflow-y: scroll;
+  border-radius: 25px;
+}
+
+.things img {
+  height: 150px;
+  width: 19vw;
+  padding: 6px;
+  border-radius: 25px;
+}
+
+.add {
+  content: "\002B";
 }

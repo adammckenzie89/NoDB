@@ -11,7 +11,7 @@ function Form(props) {
     <div className="questions">
       <main>
         <div>
-          <h1>Inside or Outside</h1>
+          <h2>Inside or Outside</h2>
           <ul>
             <label>
               <input
@@ -38,7 +38,7 @@ function Form(props) {
           {/* <button type="submit">Decide</button> */}
         </div>
         <div>
-          <h1>Group?</h1>
+          <h2>Group?</h2>
           <ul>
             <label>
               <input
@@ -65,7 +65,7 @@ function Form(props) {
           {/* <button type="submit">Decide</button> */}
         </div>
         <div>
-          <h1>Energy Level</h1>
+          <h2>Energy Level</h2>
           <ul>
             <label>
               <input

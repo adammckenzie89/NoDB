@@ -22,12 +22,14 @@ class Activitylist extends Component {
   }
 
   componentDidMount() {
-    axios.get("/api/defaultActivities").then(response => {
-      console.log(response);
-      this.setState({
-        activity: response.data
-      });
-    });
+    axios
+      .get("/api/defaultActivities")
+      .then(response => {
+        this.setState({
+          activity: response.data
+        });
+      })
+      .catch(errors => console.log("errors"));
     axios
       .get("/api/userActivity")
       .then(response => {
@@ -45,12 +47,16 @@ class Activitylist extends Component {
       .put("/api/userActivity", { newValue: this.state.editInput, updated })
       .then(response => {
         this.setState({ newActivity: response.data });
-      });
+      })
+      .catch(errors => console.log("errors"));
   }
   deleteActivity(id) {
-    axios.delete("/api/userActivity/" + id).then(response => {
-      this.setState({ newActivity: response.data });
-    });
+    axios
+      .delete("/api/userActivity/" + id)
+      .then(response => {
+        this.setState({ newActivity: response.data });
+      })
+      .catch(errors => console.log("errors"));
   }
 
   render() {
@@ -65,7 +71,7 @@ class Activitylist extends Component {
       .map((e, i) => {
         return (
           <div key={i}>
-            <h1>{e.activity}</h1>
+            <img src={e.activity} />
           </div>
         );
       });
