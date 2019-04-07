@@ -14,7 +14,7 @@ class App extends Component {
             <nav className="nav">
               <img
                 className="logo"
-                src="https://i.postimg.cc/6QJ91pYN/sflogo.png"
+                src="https://i.postimg.cc/CMv4gnhy/logo-via-logohub.png"
               />
             </nav>
           </header>

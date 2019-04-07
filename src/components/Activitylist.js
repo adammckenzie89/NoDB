@@ -79,14 +79,28 @@ class Activitylist extends Component {
       console.log(activities);
       return (
         <div key={index}>
-          <button onClick={() => this.updateActivity(activities.activities)}>
+          <button
+            className="changebutton"
+            onClick={() => this.updateActivity(activities.activities)}
+          >
             Change
           </button>
-          <input onChange={e => this.setState({ editInput: e.target.value })} />
-          <button onClick={() => this.deleteActivity(activities.id)}>
-            <img src={activities.activities} alt="activity" />
+          <input
+            className="changeimage"
+            placeholder="Image URL"
+            onChange={e => this.setState({ editInput: e.target.value })}
+          />
+          <button
+            className="deletebutton"
+            onClick={() => this.deleteActivity(activities.id)}
+          >
             &#10006;
           </button>
+          <img
+            className="newimage"
+            src={activities.activities}
+            alt="activity"
+          />
         </div>
       );
     });

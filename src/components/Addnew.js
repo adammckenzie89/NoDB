@@ -32,10 +32,10 @@ class Addnew extends Component {
     });
     return (
       <div>
-        <h4>Post your own image</h4>
+        <h4 className="post">Post Image</h4>
         <label> --> </label>
         <input
-          placeholder="New Activity"
+          placeholder="Image URL"
           onChange={e => this.handleInputChange(e.target.value)}
         />
         <button onClick={e => this.handleNewActivity(e)}>&#43;</button>

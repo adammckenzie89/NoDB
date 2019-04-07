@@ -4,7 +4,7 @@ import Addnew from "./Addnew";
 function Form(props) {
   return (
     <div className="questions">
-      <header>
+      <header className="fheader">
         <h1 className="formheader">Lets get started!</h1>
       </header>
       <main className="questionstyle">
@@ -30,7 +30,7 @@ function Form(props) {
                 checked={props.inOrOut === "outside"}
                 onChange={props.handleChange}
               />
-              Feel the breeze!
+              Feel the breeze
             </label>
           </ul>
         </div>
