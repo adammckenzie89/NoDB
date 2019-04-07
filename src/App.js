@@ -8,16 +8,21 @@ import Addnew from "./components/Addnew";
 class App extends Component {
   render() {
     return (
-      <div>
+      <main>
         <div>
           <header className="head">
-            <nav className="nav">Sunday Funday</nav>
+            <nav className="nav">
+              <img
+                className="logo"
+                src="https://i.postimg.cc/6QJ91pYN/sflogo.png"
+              />
+            </nav>
           </header>
         </div>
         <div className="App">
           <Activitylist />
         </div>
-      </div>
+      </main>
     );
   }
 }

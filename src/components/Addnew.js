@@ -17,8 +17,6 @@ class Addnew extends Component {
     this.setState({ input: value });
   }
   handleNewActivity(e) {
-    // e.preventDefault();
-    console.log("break");
     axios
       .post("/api/userActivity", { activities: this.state.input })
       .then(response => {
@@ -34,7 +32,7 @@ class Addnew extends Component {
     });
     return (
       <div>
-        <h4>Post your own</h4>
+        <h4>Post your own image</h4>
         <label> --> </label>
         <input
           placeholder="New Activity"

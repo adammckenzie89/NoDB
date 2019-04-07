@@ -1,17 +1,15 @@
 import React, { Component } from "react";
 import Addnew from "./Addnew";
 
-// class Form extends Component {
-//   constructor(props) {
-//     super(props);
-//   }
-
 function Form(props) {
   return (
     <div className="questions">
-      <main>
+      <header>
+        <h1 className="formheader">Lets get started!</h1>
+      </header>
+      <main className="questionstyle">
         <div>
-          <h2>Inside or Outside</h2>
+          <h3>Inside or Outside</h3>
           <ul>
             <label>
               <input
@@ -35,10 +33,9 @@ function Form(props) {
               Feel the breeze!
             </label>
           </ul>
-          {/* <button type="submit">Decide</button> */}
         </div>
         <div>
-          <h2>Group?</h2>
+          <h3>Group</h3>
           <ul>
             <label>
               <input
@@ -62,10 +59,9 @@ function Form(props) {
               No
             </label>
           </ul>
-          {/* <button type="submit">Decide</button> */}
         </div>
         <div>
-          <h2>Energy Level</h2>
+          <h3>Energy Level</h3>
           <ul>
             <label>
               <input

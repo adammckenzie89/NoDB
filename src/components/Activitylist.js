@@ -79,12 +79,12 @@ class Activitylist extends Component {
       console.log(activities);
       return (
         <div key={index}>
-          <h1>{activities.activities}</h1>
           <button onClick={() => this.updateActivity(activities.activities)}>
             Change
           </button>
           <input onChange={e => this.setState({ editInput: e.target.value })} />
           <button onClick={() => this.deleteActivity(activities.id)}>
+            <img src={activities.activities} alt="activity" />
             &#10006;
           </button>
         </div>
