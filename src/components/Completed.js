@@ -18,8 +18,8 @@ class Completed extends Component {
   render() {
     return (
       <div>
-        <h3> Activities {this.state.completed}</h3>
-        <button onClick={() => this.completedButton()}>Add</button>
+        <h4 className="activityAdder"> Activities {this.state.completed}</h4>
+        <button onClick={() => this.completedButton()}>&#43;</button>
         <button onClick={() => this.resetbutton()}>Reset</button>
       </div>
     );
