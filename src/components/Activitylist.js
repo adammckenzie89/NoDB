@@ -79,6 +79,11 @@ class Activitylist extends Component {
       console.log(activities);
       return (
         <div key={index}>
+          <img
+            className="newimage"
+            src={activities.activities}
+            alt="activity"
+          />
           <button
             className="changebutton"
             onClick={() => this.updateActivity(activities.activities)}
@@ -96,11 +101,6 @@ class Activitylist extends Component {
           >
             &#10006;
           </button>
-          <img
-            className="newimage"
-            src={activities.activities}
-            alt="activity"
-          />
         </div>
       );
     });

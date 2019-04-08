@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Addnew from "./Addnew";
+import Completed from "./Completed";
 
 function Form(props) {
   return (
@@ -89,6 +90,7 @@ function Form(props) {
         <section>
           <Addnew updateNewActivity={props.updateNewActivity} />
         </section>
+        <Completed />
       </main>
     </div>
   );

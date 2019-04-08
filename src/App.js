@@ -4,6 +4,8 @@ import "./App.css";
 import axios from "axios";
 import Activitylist from "./components/Activitylist.js";
 import Addnew from "./components/Addnew";
+import Footer from "./components/Footer";
+import About from "./components/About";
 
 class App extends Component {
   render() {
@@ -22,6 +24,10 @@ class App extends Component {
         <div className="App">
           <Activitylist />
         </div>
+        <div>
+          <About />
+        </div>
+        <div className="footer" />
       </main>
     );
   }

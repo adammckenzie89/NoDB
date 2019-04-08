@@ -4,6 +4,9 @@ body {
   /* background-image: linear-gradient(315deg, #e6c84f 0%, #e8807f 74%); */
   background-image: url("https://images.unsplash.com/photo-1470137430626-983a37b8ea46?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
   background-size: cover;
+  width: 100%;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
 .questions {
@@ -80,6 +83,7 @@ h3 {
   font-size: 2em;
   align-items: center;
   padding: 5px;
+  position: fixed;
 }
 .nav p {
   /* border: 1px solid black; */
@@ -109,14 +113,15 @@ h3 {
   height: 110vh;
   justify-content: center;
   /* border: 1px solid rgb(160, 17, 17); */
-  box-shadow: 5px 10px rgb(5, 5, 5, 0.5);
+  /* box-shadow: 5px 10px rgb(5, 5, 5, 0.5); */
 }
 
 .App {
   display: flex;
-  /* border: 1px solid black; */
+  /* border: 1px solid rgb(202, 29, 29); */
   flex-direction: column;
   align-items: center;
+  margin-top: 80px;
 }
 
 .things {
@@ -160,4 +165,43 @@ h3 {
 } */
 .changebutton {
   margin-left: 60px;
+}
+
+.footer {
+  height: 100px;
+  background-color: #164126;
+  /* border: 1px solid rgb(214, 66, 90); */
+}
+
+.footer h1 {
+  border: 1px solid black;
+}
+.footer div {
+  border: 1px solid black;
+  background-color: green;
+}
+
+.parentabout {
+  display: flex;
+  height: 700px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 5px 5px rgb(5, 5, 5, 0.3);
+}
+
+.about {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55%;
+  height: 80%;
+  flex-direction: column;
+  font-size: 2em;
+  font-family: Helvetica;
+  background-color: #fce669;
+  background-image: linear-gradient(315deg, #fce669 0%, #79da9e 80%);
+  border-radius: 20px;
+  box-shadow: 5px 5px rgb(5, 5, 5, 0.3);
 }
