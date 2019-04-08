@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Activitylist from "./Activitylist";
+import New from "./New";
 
 class Addnew extends Component {
   constructor(props) {
@@ -27,8 +28,8 @@ class Addnew extends Component {
   }
 
   render() {
-    let New = this.state.newActivity.map((activity, index) => {
-      return <h4 key={index}>{activity.activity}</h4>;
+    let newPic = this.state.newActivity.map((activity, index) => {
+      return <New index={index} activity={activity.activity} />;
     });
     return (
       <div>
@@ -40,7 +41,7 @@ class Addnew extends Component {
         />
         <button onClick={e => this.handleNewActivity(e)}>&#43;</button>
         <br />
-        {New}
+        {newPic}
       </div>
     );
   }

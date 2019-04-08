@@ -101,15 +101,17 @@ module.exports = {
     res.status(200).json(userInputs);
   },
   updateActivity: (req, res) => {
+    let { updated, newValue } = req.body;
     const index = userInputs.findIndex(ele => {
-      return ele.activities === req.body.updated;
+      return ele.activities === updated;
     });
-    userInputs[index].activities = req.body.newValue;
+    userInputs[index].activities = newValue;
     res.status(200).json(userInputs);
   },
   deleteActivity: (req, res) => {
+    let { id } = req.params;
     const index = userInputs.findIndex(ele => {
-      ele.id === +req.params.id;
+      ele.id === +id;
     });
     userInputs.splice(index, 1);
     res.status(200).json(userInputs);
