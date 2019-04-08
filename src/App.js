@@ -27,9 +27,7 @@ class App extends Component {
         <div>
           <About />
         </div>
-        {/* <div className="footer"> */}
         <Footer />
-        {/* </div> */}
       </main>
     );
   }

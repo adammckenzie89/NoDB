@@ -4,7 +4,7 @@ function About() {
   return (
     <section className="parentabout">
       <div className="about">
-        <h1>Who we are</h1>
+        <h1 className="why">Why Sunday Funday</h1>
         <p>
           Before the sunday scaries hit you too hard, just take a deep breath
           and realize the party pants can stay on for just one more day! Sunday

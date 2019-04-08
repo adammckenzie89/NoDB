@@ -34,7 +34,7 @@ class Addnew extends Component {
     return (
       <div>
         <h4 className="post">Post Image</h4>
-        <label> --> </label>
+        <label> </label>
         <input
           placeholder="Image URL"
           onChange={e => this.handleInputChange(e.target.value)}
