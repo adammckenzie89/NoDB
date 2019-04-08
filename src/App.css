@@ -43,7 +43,7 @@ body {
 h3 {
   background-color: antiquewhite;
   width: 200px;
-  padding: 8px;
+  padding: 6px;
   border-radius: 10px;
   font-family: Helvetica;
   font-weight: 400;
@@ -137,7 +137,7 @@ h3 {
 .things img {
   height: 190px;
   width: 19vw;
-  padding: 6px;
+  padding: 4px;
   border-radius: 20px;
   /* border: 1px solid black; */
 }
